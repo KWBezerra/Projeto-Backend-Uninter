@@ -5,7 +5,7 @@ API desenvolvida em Django para gerenciamento de uma clínica médica. Este sist
 ## ▶️ Como executar
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/KWBezerra/Projeto-Backend-Uninter
 cd seu-repositorio
 python -m venv venv
 source venv/bin/activate | ou venv\Scripts\activate no Windows
@@ -32,8 +32,8 @@ python manage.py runserver
 ## 📁 Estrutura
 
 - `register/`: Cadastro de pacientes e funcionários / Login de funcionarios e pacientes(Futuro).
-- `patient/`: Agendamento de consultas
-- `controll/`: Prontuários médicos
+- `patient/`: gerenciamento de consultas e pacientes.
+- `controll/`: Prontuários médicos.
 
 ## 🔒 Segurança
 
