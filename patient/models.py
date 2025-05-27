@@ -15,12 +15,19 @@ class Agendamento(models.Model):
         ('consulta', 'Consulta'),
         ('exame', 'Exame'),
     )
+    STATUS_CHOICES = [ # Adicionado para o campo status
+        ('Agendado', 'Agendado'),
+        ('Cancelado', 'Cancelado'),
+        ('Concluido', 'Concluído'),
+    ]
 
     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
     data_hora = models.DateTimeField()
     tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)
     especialidade = models.CharField(max_length=100)
     criado_em = models.DateTimeField(auto_now_add=True)
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Agendado') # Novo campo status
 
     def __str__(self):
         return f'{self.tipo.title()} de {self.paciente.nome_completo} em {self.data_hora.strftime("%d/%m/%Y %H:%M")}'
+
